@@ -24,7 +24,7 @@
        ;shared clipboard with linux
        :clipboard "unnamedplus"
        ;show line numbers
-       :number true
+       :number false
        ;show line and column number
        :ruler true
        ;makes signcolumn always one column with signs and linenumber
