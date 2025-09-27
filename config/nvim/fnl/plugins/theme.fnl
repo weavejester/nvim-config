@@ -4,5 +4,5 @@
   :config
   (fn []
     (let [theme (require "monokai-nightasty")]
-      (theme.setup {})
+      (theme.setup {:dark_style_background :transparent})
       (theme.load)))}]
