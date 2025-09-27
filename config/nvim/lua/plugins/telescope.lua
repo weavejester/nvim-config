@@ -1,9 +1,13 @@
--- [nfnl] Compiled from fnl/plugins/telescope.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] fnl/plugins/telescope.fnl
+local function set_leader_keymap(k, f, desc)
+  return vim.keymap.set("n", ("<leader>" .. k), f, {desc = desc})
+end
 local function _1_()
-  vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", {noremap = true})
-  vim.keymap.set("n", "<leader>fg", ":lua require('telescope.builtin').live_grep()<CR>", {noremap = true})
-  vim.keymap.set("n", "<leader>fb", ":lua require('telescope.builtin').buffers()<CR>", {noremap = true})
-  return vim.keymap.set("n", "<leader>fh", ":lua require('telescope.builtin').help_tags()<CR>", {noremap = true})
+  local builtin = require("telescope.builtin")
+  set_leader_keymap("ff", builtin.find_files, "Telescope find files")
+  set_leader_keymap("fg", builtin.live_grep, "Telescope live grep")
+  set_leader_keymap("fb", builtin.buffers, "Telescope buffers")
+  return set_leader_keymap("fh", builtin.help_tags, "Telescope help tags")
 end
 local function _2_()
   local telescope = require("telescope")
