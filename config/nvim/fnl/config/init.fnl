@@ -17,18 +17,18 @@
        :softtabstop 2
        ;settings needed for compe autocompletion
        :completeopt "menuone,noselect"
-       ;case insensitive search
+       ;case insensitive searchon_publish_diagnostics
        :ignorecase true
        ;smart search case
        :smartcase true
        ;shared clipboard with linux
        :clipboard "unnamedplus"
-       ;show line numbers
+       ;hide line numbers
        :number false
        ;show line and column number
        :ruler true
-       ;makes signcolumn always one column with signs and linenumber
-       :signcolumn "number"
+       ;makes signcolumn always one column with signs
+       :signcolumn "yes"
        ;load in local configurations
        :exrc true}]
   (each [option value (pairs options)]

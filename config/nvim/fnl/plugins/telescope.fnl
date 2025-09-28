@@ -1,17 +1,14 @@
-(fn set-leader-keymap [k f desc]
-  (vim.keymap.set :n (.. "<leader>" k) f {:desc desc}))
+(local builtin (require "telescope.builtin"))
 
 [{1 :nvim-telescope/telescope.nvim
   :dependencies [:nvim-telescope/telescope-ui-select.nvim
                  :nvim-lua/popup.nvim
                  :nvim-lua/plenary.nvim]
-  :init
-  (fn []
-    (let [builtin (require "telescope.builtin")]
-      (set-leader-keymap "ff" builtin.find_files "Telescope find files")
-      (set-leader-keymap "fg" builtin.live_grep "Telescope live grep")
-      (set-leader-keymap "fb" builtin.buffers "Telescope buffers")
-      (set-leader-keymap "fh" builtin.help_tags "Telescope help tags")))
+  :keys
+  [{1 "<leader>ff" 2 builtin.find_files :desc "Telescope find files"}
+   {1 "<leader>fg" 2 builtin.life_grep  :desc "Telescope life grep"}
+   {1 "<leader>fb" 2 builtin.buffers    :desc "Telescope buffers"}
+   {1 "<leader>fh" 2 builtin.help_tags  :desc "Telescope help tags"}]
   :config
   (fn []
     (let [telescope (require :telescope)

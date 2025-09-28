@@ -4,6 +4,8 @@
   :dependencies [:nvim-lua/plenary.nvim
                  :MunifTanjim/nui.nvim
                  :nvim-tree/nvim-web-devicons]
+  :keys
+  [{1 "<leader>tt" 2 "<cmd>Neotree toggle<cr>" :desc "Toggle Neotree"}]
   :config
   (fn []
     (let [neo-tree (require "neo-tree")]
