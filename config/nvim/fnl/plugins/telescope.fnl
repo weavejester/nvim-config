@@ -6,7 +6,7 @@
                  :nvim-lua/plenary.nvim]
   :keys
   [{1 "<leader>ff" 2 builtin.find_files :desc "Telescope find files"}
-   {1 "<leader>fg" 2 builtin.life_grep  :desc "Telescope life grep"}
+   {1 "<leader>fg" 2 builtin.live_grep  :desc "Telescope live grep"}
    {1 "<leader>fb" 2 builtin.buffers    :desc "Telescope buffers"}
    {1 "<leader>fh" 2 builtin.help_tags  :desc "Telescope help tags"}]
   :config
