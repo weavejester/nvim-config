@@ -34,4 +34,7 @@
   (each [option value (pairs options)]
     (core.assoc vim.o option value)))
 
+;set indentation to work like clojure-mode
+(set vim.g.clojure_align_subforms 1)
+
 {}

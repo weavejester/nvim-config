@@ -10,4 +10,5 @@ do
     core.assoc(vim.o, option, value)
   end
 end
+vim.g.clojure_align_subforms = 1
 return {}
