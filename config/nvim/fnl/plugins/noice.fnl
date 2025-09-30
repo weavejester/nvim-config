@@ -1,4 +1,7 @@
-[{1 :folke/noice.nvim
+[{1 :rcarriga/nvim-notify
+  :opts {:top_down false}}
+
+ {1 :folke/noice.nvim
   :event "VeryLazy"
   :dependencies [:MunifTanjim/nui.nvim :rcarriga/nvim-notify]
   :config
