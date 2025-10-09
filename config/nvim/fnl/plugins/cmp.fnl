@@ -20,7 +20,7 @@
                                               [:source_name]]}}}
          :snippets {:preset :luasnip}
          :cmdline  {:enabled false}
-         :sources  {:default [:lsp :path :snippets :buffer :conjure]
+         :sources  {:default [:lsp :path :snippets :conjure]
                     :providers {:conjure {:name :conjure
                                           :module :blink.compat.source
                                           :score_offset -3} }}}}]
