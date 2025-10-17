@@ -1,8 +1,8 @@
 (local {: autoload} (require :nfnl.module))
 (local core (autoload :nfnl.core))
 
-;don't wrap lines
-(set vim.wo.wrap false)
+;wrap lines
+(set vim.wo.wrap true)
 
 ;space is reserved to be lead
 (vim.keymap.set :n :<space> :<nop> {:noremap true})
