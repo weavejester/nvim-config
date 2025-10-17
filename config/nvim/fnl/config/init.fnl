@@ -23,12 +23,12 @@
        :smartcase true
        ;shared clipboard with linux
        :clipboard "unnamedplus"
-       ;show line numbers
-       :number true
+       ;hide line numbers
+       :number false
        ;show line and column number
        :ruler true
        ;makes signcolumn always one column with signs
-       :signcolumn "number"
+       :signcolumn "yes:1"
        ;load in local configurations
        :exrc true}]
   (each [option value (pairs options)]
