@@ -37,4 +37,14 @@
 ;set indentation to work like clojure-mode
 (set vim.g.clojure_align_subforms 1)
 
+;set custom Clojure indentation
+(vim.api.nvim_create_autocmd
+  ["FileType"]
+  {:pattern "clojure"
+   :callback (fn []
+               (vim.opt_local.lispwords:append
+                 ["register-effect!"
+                  "register-action!"
+                  "register-placeholder!"]))})
+
 {}

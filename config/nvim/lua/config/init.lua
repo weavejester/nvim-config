@@ -11,4 +11,8 @@ do
   end
 end
 vim.g.clojure_align_subforms = 1
+local function _2_()
+  return vim.opt_local.lispwords:append({"register-effect!", "register-action!", "register-placeholder!"})
+end
+vim.api.nvim_create_autocmd({"FileType"}, {pattern = "clojure", callback = _2_})
 return {}
