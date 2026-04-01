@@ -43,7 +43,10 @@
   {:pattern "clojure"
    :callback (fn []
                (vim.opt_local.lispwords:append
-                 ["go-websocket"
+                 ["try"
+                  "catch"
+                  "finally"
+                  "go-websocket"
                   "go-loop"
                   "register-effect!"
                   "register-action!"

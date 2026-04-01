@@ -12,7 +12,7 @@ do
 end
 vim.g.clojure_align_subforms = 1
 local function _2_()
-  return vim.opt_local.lispwords:append({"go-websocket", "go-loop", "register-effect!", "register-action!", "register-placeholder!"})
+  return vim.opt_local.lispwords:append({"try", "catch", "finally", "go-websocket", "go-loop", "register-effect!", "register-action!", "register-placeholder!"})
 end
 vim.api.nvim_create_autocmd({"FileType"}, {pattern = "clojure", callback = _2_})
 return {}
