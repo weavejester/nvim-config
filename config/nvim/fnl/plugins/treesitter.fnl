@@ -1,7 +1,9 @@
 [{1 :nvim-treesitter/nvim-treesitter
+  :branch :main
   :build ":TSUpdate"
+  :lazy false
   :config (fn []
-            (let [treesitter (require :nvim-treesitter.configs)]
+            (let [treesitter (require :nvim-treesitter)]
               (treesitter.setup {:highlight {:enable true}
                                  :indent {:enable true}
                                  :ensure_installed [:bash

@@ -2,6 +2,10 @@
   :version "*"
   :lazy true}
 
+ {1 :L3MON4D3/LuaSnip
+  :version "v2.*"
+  :build "make install_jsregexp"}
+
  {1 :saghen/blink.cmp
   :version "*"
   :lazy false
@@ -23,4 +27,4 @@
          :sources  {:default [:lsp :path :snippets :conjure]
                     :providers {:conjure {:name :conjure
                                           :module :blink.compat.source
-                                          :score_offset -3} }}}}]
+                                          :score_offset -3}}}}}]
