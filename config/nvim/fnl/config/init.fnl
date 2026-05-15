@@ -32,7 +32,7 @@
        ;load in local configurations
        :exrc true}]
   (each [option value (pairs options)]
-    (core.assoc vim.o option value)))
+    (core.assoc vim.opt option value)))
 
 ;set indentation to work like clojure-mode
 (set vim.g.clojure_align_subforms 1)
